@@ -230,8 +230,10 @@ For only replace set in documents in cells variables [VARIABLE_NAME]. And in cod
 After generate file variables be replaced.
 
 You can use code in template
-[% %] - block of code
-[%= %] - value
+<pre>
+  [% %] - block of code
+  [%= %] - value
+</pre>
 You can send collection for block, only one. In template collection named 'records'
 In generate need use :
 <pre>
@@ -241,7 +243,9 @@ In generate need use :
       end
 </pre>
 Add option - give context for template. In tep=mplate you can use
-[%= options[:count_collection] %]
+<pre>
+  [%= options[:count_collection] %]
+</pre>
 value be replaced.
 
 h3. REQUIREMENTS
