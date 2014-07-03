@@ -8,7 +8,6 @@ Add to Gemfile
 <pre>
   gem 'odf-ods-report'
 </pre>
-(sudo)
 
 h2. USAGE ODF
 
@@ -216,9 +215,9 @@ report.generate("./documents/")
 
 <hr/>
 
-h3 ODSReport
+h3. ODSReport
 
-h4 Template
+h4. Template
 
 For only replace set in documents in cells variables [VARIABLE_NAME]. And in code:
 <pre>
