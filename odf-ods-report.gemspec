@@ -4,7 +4,7 @@ require "odf-report/version"
 
 Gem::Specification.new do |s|
   s.name = %q{odf-report}
-  s.version = ODFODSReport::VERSION
+  s.version = ODFReport::VERSION
 
   s.authors = ["Sandro Duarte, Eugene Gavrilov"]
   s.description = %q{Generates ODF(ODS) files, given a template (.odt, .ods) and data, replacing tags}
