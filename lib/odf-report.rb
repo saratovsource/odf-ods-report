@@ -1,8 +1,3 @@
-require 'rubygems'
-require 'zip/zipfilesystem'
-require 'fileutils'
-require 'nokogiri'
-
 require File.expand_path('../parser/default',  __FILE__)
 require File.expand_path('../parser/file',  __FILE__)
 require File.expand_path('../odf-report/images',  __FILE__)
