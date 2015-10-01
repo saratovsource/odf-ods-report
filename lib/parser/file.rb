@@ -9,15 +9,15 @@ module Parser
 
       @template = template
       @tmp_dir = ::File.join(Dir.tmpdir, random_filename(:prefix=>'tmp_'))
-      Dir.mkdir(@tmp_dir) unless ::File.exists? @tmp_dir
+      ::Dir.mkdir(@tmp_dir) unless ::File.exists? @tmp_dir
     end
 
     def create(dest)
       if dest
-        FileUtils.cp(@template, dest)
+        ::FileUtils.cp(@template, dest)
         @path = dest
       else
-        FileUtils.cp(@template, @tmp_dir)
+        ::FileUtils.cp(@template, @tmp_dir)
         @path = "#{@tmp_dir}/#{::File.basename(@template)}"
       end
     end
@@ -31,13 +31,13 @@ module Parser
     end
 
     def remove
-      FileUtils.rm_rf(@tmp_dir)
+      ::FileUtils.rm_rf(@tmp_dir)
     end
 
     private
 
     def update_content_file(content_file, &block)
-      Zip::ZipFile.open(@path) do |z|
+      ::Zip::ZipFile.open(@path) do |z|
         cont = "#{@tmp_dir}/#{content_file}"
         z.extract(content_file, cont)
         txt = ''
